@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Icons
 
 
 def main(request):
@@ -6,7 +7,8 @@ def main(request):
 
 
 def home(request):
-    return render(request=request, template_name="icons.html")
+    icons = Icons.objects.all()
+    return render(request=request, template_name="icons.html", context={"icons": icons})
 
 
 def login(request):

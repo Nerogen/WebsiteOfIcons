@@ -33,111 +33,116 @@
         </div>
     </div>
     <div class="icons">
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
-        <div class="icon-desc">
-            <img class="icon" src="../static/background/icon.png">
-        </div>
+        {% for icon in icons %}
+            <div class="icon-desc">
+                <img class="icon" src="{{ icon.icon.url }}">
+            </div>
+        {% endfor %}
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
+<!--        <div class="icon-desc">-->
+<!--            <img class="icon" src="../static/background/icon.png">-->
+<!--        </div>-->
     </div>
 </body>
 </html>
