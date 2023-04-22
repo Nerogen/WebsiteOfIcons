@@ -1,7 +1,39 @@
+from django.contrib.auth import authenticate, logout, login
 from django.contrib.auth.forms import UserCreationForm
-from django.forms import Form
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views import View
+
 from .models import Icons
+
+
+class Register(View):
+    template_name = './signup.html'
+
+    def get(self, request):
+        context = {
+            'form': UserCreationForm()
+        }
+        return render(request, self.template_name, context)
+
+    def post(self, request):
+        form = UserCreationForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('/users/shortener')
+        context = {
+            'form': form
+        }
+        return render(request, self.template_name, context)
+
+
+def logout_user(request):
+    logout(request)
+    return redirect('/users/shortener')
 
 
 def main(request):
@@ -27,7 +59,7 @@ def home(request):
         return render(request=request, template_name="icons.html")
 
 
-def login(request):
+def login_render(request):
     return render(request=request, template_name="login.html")
 
 
