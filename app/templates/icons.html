@@ -24,7 +24,11 @@
             <option>Social & People</option>
             <option>Weather</option>
         </select>
-        <input class="search" type="text" formmethod="post" placeholder="Search icons...">
+        <!--        Make post method from home-->
+        <form action="/home/" method="post">
+            <input class="search" id="subject_matter" name="subject_matter" type="text" placeholder="Search icons...">
+            <input type="submit" value="Find">
+        </form>
         <div class="button-block">
             <button class="selected-button">All</button>
             <button>Black</button>

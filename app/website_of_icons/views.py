@@ -7,10 +7,7 @@ def main(request):
 
 
 def home(request):
-    if request.method == 'POST':
-        print(request.POST.get('search'))
-        icons = Icons.objects.get(name=request.POST.get('search'))
-        # icons = Icons.objects.all()
+    icons = Icons.objects.all()
     return render(request=request, template_name="icons.html", context={"icons": icons})
 
 
