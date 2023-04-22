@@ -24,11 +24,12 @@
             <option>Social & People</option>
             <option>Weather</option>
         </select>
-        <!--        Make post method from home-->
-        <form action="/home/" method="post">
-            <input class="search" id="subject_matter" name="subject_matter" type="text" placeholder="Search icons...">
-            <input type="submit" value="Find">
+        <form class="search" action='' method="POST">
+            {% csrf_token %}
+            <input name="subject_matter">
+            <button type="submit">Find</button>>
         </form>
+
         <div class="button-block">
             <button class="selected-button">All</button>
             <button>Black</button>
