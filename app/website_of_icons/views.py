@@ -7,7 +7,10 @@ def main(request):
 
 
 def home(request):
-    icons = Icons.objects.all()
+    if request.method == 'POST':
+        print(request.POST.get('search'))
+        icons = Icons.objects.get(name=request.POST.get('search'))
+        # icons = Icons.objects.all()
     return render(request=request, template_name="icons.html", context={"icons": icons})
 
 
@@ -17,36 +20,5 @@ def login(request):
 
 def registration(request):
     return render(request=request, template_name="signup.html")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # usikzl5j9swGW83B1nWZozLdA04ysQQOT8p8FbOq8hot5lwo
