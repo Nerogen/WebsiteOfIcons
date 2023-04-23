@@ -31,6 +31,30 @@ class Register(View):
         return render(request, self.template_name, context)
 
 
+class Login(View):
+    template_name = './login.html'
+
+    def get(self, request):
+        context = {
+            'form': UserCreationForm()
+        }
+        return render(request, self.template_name, context)
+
+    def post(self, request):
+        form = UserCreationForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            login(request, (username, password))
+            return redirect('/users/shortener')
+        context = {
+            'form': form
+        }
+        return render(request, self.template_name, context)
+
+
 def logout_user(request):
     logout(request)
     return redirect('/users/shortener')
