@@ -90,4 +90,3 @@ def login_render(request):
 def registration(request):
     return render(request=request, template_name="signup.html")
 
-# usikzl5j9swGW83B1nWZozLdA04ysQQOT8p8FbOq8hot5lwo
