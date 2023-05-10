@@ -17,13 +17,17 @@
         </div>
     </div>
     <div class="header2">
-        <select class="icon-category-select">
-            <option selected>Icon packs</option>
-            <option>Communication</option>
-            <option>Food</option>
-            <option>Social & People</option>
-            <option>Weather</option>
-        </select>
+        <form class="icon-category-select" action="" method="POST">
+            {% csrf_token %}
+            <select name="select">
+                <option selected value="Icon packs">Icon packs</option>
+                <option value="Communication">Communication</option>
+                <option value="Food">Food</option>
+                <option value="Social & People">Social & People</option>
+                <option value="Weather">Weather</option>
+            </select>
+            <button class="search_button1" type="submit">✅</button>
+        </form>
         <form class="search" action='' method="POST">
             {% csrf_token %}
             <input class="serachfiled" name="subject_matter">

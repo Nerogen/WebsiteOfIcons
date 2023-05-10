@@ -84,8 +84,13 @@ body > * {
     color: white;
     font-size: 1.25em;
 }
+.search_button1 {
+    width: 28%;
+    background-color: #1D1D1D;
+    font-size: 1.25em;
+}
 .icon-category-select {
-    width: 10%;
+    width: 12%;
     color: white;
     padding: 0 30px;
     border: none;

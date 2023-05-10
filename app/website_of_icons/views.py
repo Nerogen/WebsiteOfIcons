@@ -74,7 +74,12 @@ def get(request):
 def home(request):
     if request.method == "POST":
         icons = Icons.objects.all()
-        subject_matter = request.POST.get('subject_matter')
+        subject_matter = ""
+        if request.POST.get("select"):
+            for item in request.POST.get("select"):
+                subject_matter += item
+        else:
+            subject_matter = request.POST.get('subject_matter')
         icons = [icon for icon in icons if subject_matter == str(icon)]
         return render(request=request, template_name="icons.html", context={"icons": icons})
     else:
