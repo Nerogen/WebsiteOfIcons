@@ -66,6 +66,24 @@ body > * {
     color: white;
     padding-left: 50px;
 }
+.serachfiled {
+    width: 80%;
+    border: none;
+    text-color: white;
+    background-color: #1d1d1d;
+    padding-left: 50px;
+    height: 40px;
+}
+.search_button {
+    width: 10%;
+    height: 40px;
+    background-icon: url('../background/search.png');
+    background-color: #1a1919;
+    border: solid white 1px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.25em;
+}
 .icon-category-select {
     width: 10%;
     color: white;
