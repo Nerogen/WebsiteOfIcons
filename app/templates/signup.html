@@ -15,6 +15,7 @@
             </button>
         </div>
         <form class="icon-category-select" action="" method="POST">
+            {% csrf_token %}
             <div class="textareas">
                 <input class="login-textarea" name="username" type="text" placeholder="Login">
                 <input class="login-textarea" name="password" type="text" placeholder="Password">
