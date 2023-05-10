@@ -89,9 +89,27 @@ def home(request):
 
 
 def login_render(request):
+    form = UserCreationForm(request.POST)
+
+    if form.is_valid():
+        form.save()
+        username = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password')
+        user = authenticate(username=username, password=password)
+        login(request, user)
+        return redirect('/users/shortener')
     return render(request=request, template_name="login.html")
 
 
 def registration(request):
+    form = UserCreationForm(request.POST)
+
+    if form.is_valid():
+        form.save()
+        username = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password')
+        user = authenticate(username=username, password=password)
+        login(request, user)
+        return redirect('../home/')
     return render(request=request, template_name="signup.html")
 
